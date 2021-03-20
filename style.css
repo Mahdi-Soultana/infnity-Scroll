@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Bebas Neue", cursive;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  min-height: 100vh;
+  background-color: #eee;
+}
+h1 {
+  margin: 2rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+.container {
+  max-width: 800px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  margin: 1rem 0;
+  box-shadow: 0 0 6px black;
+}
+.loader_container {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.329);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.loader {
+  border: 16px solid #ffffff; /* Light grey */
+  border-top: 16px solid #004c5f; /* Blue */
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20rem;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+
+  box-shadow: 0 0 3px black;
+}
+
+.active {
+  display: block;
+}
+.active ~ div {
+  display: none;
+}
+.active ~ h1 {
+  color: rgb(185, 185, 185);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+a {
+  display: inline-block;
+  filter: saturate(0.7);
+  transition: 0.2s;
+}
+a:hover {
+  transform: translateY(-3px) scale(1.01);
+  filter: saturate(1.1);
+}
