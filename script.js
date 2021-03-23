@@ -53,7 +53,7 @@ function displayImg({ desc, href, src }) {
 }
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY + 2000 > document.body.offsetHeight && isLoad) {
+  if (window.scrollY + 6000 > document.body.offsetHeight && isLoad) {
     isLoad = false;
     countImageLoading = 0;
     FetchUrl(url);
